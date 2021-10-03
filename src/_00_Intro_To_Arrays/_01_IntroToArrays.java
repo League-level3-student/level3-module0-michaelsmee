@@ -40,6 +40,7 @@ public class _01_IntroToArrays {
     	for(int i=0; i<numbers.length; i++) {
     		System.out.println(numbers[i]);
     	}
+    	
         // 9. without printing the entire array, print only the smallest number
         //    on the array
     	int x = numbers[0];
