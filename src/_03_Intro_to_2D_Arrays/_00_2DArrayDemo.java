@@ -13,14 +13,14 @@ public class _00_2DArrayDemo {
          * array2D[2] is the array {7, 8, 9}
          *
          * For row 1:
-         * array2D[1][0] is the number 4
-         * array2D[1][1] is the number 5
+         * array2D[1][0] is the number 4			
+         * array2D[1][1] is the number 5			4 5 6
          * array2D[1][2] is the number 6
          *
          * For column 0:
-         * array2D[0][0] is the number 1
-         * array2D[1][0] is the number 4
-         * array2D[2][0] is the number 7
+         * array2D[0][0] is the number 1			1
+         * array2D[1][0] is the number 4			4
+         * array2D[2][0] is the number 7			7
          */
 
         // array2d is an array of an array of ints. Or a 2D array.
