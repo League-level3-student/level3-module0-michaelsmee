@@ -30,6 +30,7 @@ public class _02_2DArrayPractice {
      *          3, 4, 5
      *          6, 7, 8
      */
+	int[][] Integer = new int[3][3];
     public Integer[][] test1() {
         
         return null;
@@ -40,6 +41,7 @@ public class _02_2DArrayPractice {
      *          "a", "b", "c", "d",
      *          "e", "f", "g", "e"
      */
+    String[][] Strings = new String[2][4]; 
     public String[][] test2() {
         
         return null;
@@ -53,6 +55,7 @@ public class _02_2DArrayPractice {
      *          true, true,
      *          true, false
      */
+    boolean [][] Boolean = new boolean[4][2];
     public Boolean[][] test3() {
         
         return null;
@@ -64,7 +67,8 @@ public class _02_2DArrayPractice {
      * 
      * int[][] grid = new int[2][3];
      * 
-     * 
+     * [3][6][1]
+     * [4][5][2]
      * 
      * Show your teacher the grid you created
      */
@@ -75,7 +79,10 @@ public class _02_2DArrayPractice {
      * 
      * Robot[][] robots = new Robot[4][2];
      * 
-     * 
+     * [rob1][rob2]
+     * [rob3][rob4]
+     * [rob5][rob5]
+     * [rob6][rob7]
      * 
      * Show your teacher the grid you created
      */
@@ -83,6 +90,7 @@ public class _02_2DArrayPractice {
     /* Given the array of Objects below, return the element that is not null
      *          null, null, null, null
      *          null, null, null, Object
+     *          return Objects[2][4]
      */
     public Object test4() {
         Object[][] objects = { {null, null, null, null}, {null, null, null, new Object()} };
