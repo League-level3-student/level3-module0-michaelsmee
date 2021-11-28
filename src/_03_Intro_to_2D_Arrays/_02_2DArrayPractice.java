@@ -30,10 +30,10 @@ public class _02_2DArrayPractice {
      *          3, 4, 5
      *          6, 7, 8
      */
-	int[][] Integer = new int[3][3];
+	Integer[][] integers = new Integer[3][3];
     public Integer[][] test1() {
-        
-        return null;
+        	
+        return integers;
     }
     
     /*
@@ -41,10 +41,10 @@ public class _02_2DArrayPractice {
      *          "a", "b", "c", "d",
      *          "e", "f", "g", "e"
      */
-    String[][] Strings = new String[2][4]; 
+    String[][] strings = new String[2][4]; 
     public String[][] test2() {
         
-        return null;
+        return strings;
     }
     
     /*
@@ -55,10 +55,10 @@ public class _02_2DArrayPractice {
      *          true, true,
      *          true, false
      */
-    boolean [][] Boolean = new boolean[4][2];
+    Boolean [][] booleans = new Boolean[5][2];
     public Boolean[][] test3() {
         
-        return null;
+        return booleans;
     }
     
     /*
@@ -93,9 +93,9 @@ public class _02_2DArrayPractice {
      *          return Objects[2][4]
      */
     public Object test4() {
-        Object[][] objects = { {null, null, null, null}, {null, null, null, new Object()} };
+        Object[][] Objects = { {null, null, null, null}, {null, null, null, new Object()} };
         
-        return null;
+        return Objects[1][3];
     }
     
     /* Given the array of Objects below, return the element that is not null
@@ -105,7 +105,7 @@ public class _02_2DArrayPractice {
     public Object test5() {
         Object[][] objects = { {null, null, new Object(), null}, {null, null, null, null} };
         
-        return null;
+        return objects[0][2];
     }
     
     /*
@@ -113,9 +113,14 @@ public class _02_2DArrayPractice {
      * first row (row 0)
      */
     public Integer test6() {
+    	int total = 0;
         int[][] nums = { {8, 7, 6, 5}, {4, 3}, {2, 1, 0} };
         
-        return null;
+        for(int i = 0; i<nums[0].length; i++) {
+        	total+= nums[i][0] + nums[i+1][0];
+        }
+        
+        return total;
     }
     
     /*
@@ -123,9 +128,16 @@ public class _02_2DArrayPractice {
      * first column (column 0)
      */
     public Integer test7() {
+    	int sum = 0;
         int[][] nums = { {8, 7, 6, 5}, {4, 3}, {2, 1, 0} };
         
-        return null;
+        for(int i =0; i<nums.length; i++) {
+        
+        	sum+=nums[i][0]+nums[i+1][0];
+        	
+        }
+        
+        return sum;
     }
     
     /*
@@ -167,21 +179,21 @@ public class _02_2DArrayPractice {
      */
     public Integer getEastNeighbor(int[][] matrix, int row, int col) {
         
-        return null;
+        return matrix[2][3];
     }
     
     public Integer getWestNeighbor(int[][] matrix, int row, int col) {
         
-        return null;
+        return matrix[2][1];
     }
     
     public Integer getNorthNeighbor(int[][] matrix, int row, int col) {
         
-        return null;
+        return matrix[1][2];
     }
     
     public Integer getSouthNeighbor(int[][] matrix, int row, int col) {
         
-        return null;
+        return matrix[3][2];
     }
 }
