@@ -117,9 +117,10 @@ public class _02_2DArrayPractice {
         int[][] nums = { {8, 7, 6, 5}, {4, 3}, {2, 1, 0} };
         
         for(int i = 0; i<nums[0].length; i++) {
-        	total+= nums[i][0] + nums[i+1][0];
+        	total += nums[0][i];
+        	//System.out.println(nums[0][i]);
         }
-        
+        //System.out.println(total);
         return total;
     }
     
@@ -133,7 +134,7 @@ public class _02_2DArrayPractice {
         
         for(int i =0; i<nums.length; i++) {
         
-        	sum+=nums[i][0]+nums[i+1][0];
+        	sum+=nums[i][0];
         	
         }
         
@@ -145,8 +146,12 @@ public class _02_2DArrayPractice {
      * specified row
      */
     public Integer getSumByRow(int[][] matrix, int row) {
-        
-        return null;
+    	int total = 0;
+        for(int i=0; i<matrix[row].length; i++) {
+        	total+=matrix[row][i];
+        	System.out.println(total);
+        }
+        return total;
     }
     
     /*
@@ -154,8 +159,12 @@ public class _02_2DArrayPractice {
      * specified column
      */
     public Integer getSumByColumn(int[][] matrix, int col) {
-        
-        return null;
+    	int total = 0;
+        for(int i=0; i<matrix[col].length; i++) {
+        	total+=matrix[i][col];
+        	
+        }
+        return total;
     }
     
     /*
@@ -179,21 +188,21 @@ public class _02_2DArrayPractice {
      */
     public Integer getEastNeighbor(int[][] matrix, int row, int col) {
         
-        return matrix[2][3];
+        return matrix[1][2];
     }
     
     public Integer getWestNeighbor(int[][] matrix, int row, int col) {
         
-        return matrix[2][1];
+        return matrix[1][0];
     }
     
     public Integer getNorthNeighbor(int[][] matrix, int row, int col) {
         
-        return matrix[1][2];
+        return matrix[0][1];
     }
     
     public Integer getSouthNeighbor(int[][] matrix, int row, int col) {
         
-        return matrix[3][2];
+        return matrix[2][1];
     }
 }
