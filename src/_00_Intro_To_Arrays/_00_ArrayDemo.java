@@ -8,6 +8,7 @@ public class _00_ArrayDemo {
          */
         String[] names = new String[5];
         
+        
         names[0] = "Jan";
         names[1] = "Sara";
         names[2] = "Fred";
