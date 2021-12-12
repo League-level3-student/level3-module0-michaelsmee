@@ -188,21 +188,43 @@ public class _02_2DArrayPractice {
      */
     public Integer getEastNeighbor(int[][] matrix, int row, int col) {
         
-        return matrix[1][2];
+    	if(col<=matrix.length-2) {
+    		return matrix[row][col+1];
+    	}
+    	else {
+    		return null;
+    	}
+    	
+        
     }
     
     public Integer getWestNeighbor(int[][] matrix, int row, int col) {
+        if(col>=1) {
+        	return matrix[row][col-1];
+        }
+        else {
+        	return null;
+        }
         
-        return matrix[1][0];
     }
     
     public Integer getNorthNeighbor(int[][] matrix, int row, int col) {
-        
-        return matrix[0][1];
+        if(row>=1) {
+        	return matrix[row-1][col];
+        }
+        else {
+        	return null;
+        }
+    	
     }
     
     public Integer getSouthNeighbor(int[][] matrix, int row, int col) {
+        if(row<=matrix.length-2) {
+        	return matrix[row+1][col];
+        }
+        else {
+        	return null;
+        }
         
-        return matrix[2][1];
     }
 }
