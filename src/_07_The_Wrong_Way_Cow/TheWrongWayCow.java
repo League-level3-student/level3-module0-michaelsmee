@@ -50,22 +50,55 @@ package _07_The_Wrong_Way_Cow;
 
 public class TheWrongWayCow {
 
-    public static int[] findWrongWayCow(final char[][] field) {
-        // Fill in the code to return the [col, row] coordinate position of the
-        // head (letter 'c') of the wrong way cow!
-    	int upCow = 0;
-    	int downCow = 0;
-    	int leftCow = 0;
-    	int rightCow = 0;
-    	
-        for(int i=0; i<field.length; i++) {
-        	for(int j=0; j<field[i].length; j++) {
-        		if(field[i][j] == 'c' && field[i+1][j] == 'o' && field[i+2][j]=='w') {
-        			rightCow+=1;
-        		}
-        		
-        	}
-        }
-        return null;
-    }
+	public static int[] findWrongWayCow(final char[][] field) {
+		// Fill in the code to return the [col, row] coordinate position of the
+		// head (letter 'c') of the wrong way cow!
+		int upCow = 0;
+		int downCow = 0;
+		int leftCow = 0;
+		int rightCow = 0;
+		int[] right = new int[2];
+		int[] left = new int[2];
+		int[] up = new int[2];
+		int[] down = new int[2];
+
+		for (int i = 0; i < field.length; i++) {
+			for (int j = 0; j < field[i].length; j++) {
+				if (i <= field.length - 3 && field[i][j] == 'c' && field[i + 1][j] == 'o' && field[i + 2][j] == 'w') {
+					rightCow += 1;
+					right[0] = j;
+					right[1] = i;
+
+				}
+				if (j >= 2 && field[i][j] == 'c' && field[i][j - 1] == 'o' && field[i][j - 2] == 'w') {
+					upCow += 1;
+					up[0] = j;
+					up[1] = i;
+
+				}
+				if (i <= field.length - 3 && field[i][j] == 'w' && field[i + 1][j] == 'o' && field[i + 2][j] == 'c') {
+					leftCow += 1;
+					left[0] = j;
+					left[1] = i;
+
+				}
+				if (j >= 2 && field[i][j] == 'w' && field[i][j - 1] == 'o' && field[i][j - 2] == 'c') {
+					downCow += 1;
+					down[0] = j;
+					down[1] = i;
+
+				}
+
+			}
+		}
+		if (rightCow == 1) {
+			return right;
+		} else if (leftCow == 1) {
+			return left;
+		} else if (upCow == 1) {
+			return up;
+		} else {
+			return down;
+		}
+	}
 }
