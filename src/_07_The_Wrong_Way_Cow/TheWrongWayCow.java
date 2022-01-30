@@ -79,12 +79,12 @@ public class TheWrongWayCow {
 				if (i <= field.length - 3 && field[i][j] == 'w' && field[i + 1][j] == 'o' && field[i + 2][j] == 'c') {
 					leftCow += 1;
 					left[0] = j;
-					left[1] = i;
+					left[1] = i+2;
 
 				}
 				if (j >= 2 && field[i][j] == 'w' && field[i][j - 1] == 'o' && field[i][j - 2] == 'c') {
 					downCow += 1;
-					down[0] = j;
+					down[0] = j-2;
 					down[1] = i;
 
 				}
